@@ -1,8 +1,6 @@
 import numpy as np
 
-"""
-
-"""
+# Mathematical Equation
 
 
 def idft(x):

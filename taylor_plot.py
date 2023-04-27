@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 # Define the sin function
-def sin(x):
+def get_sine(x):
     return np.sin(x)
 
 
@@ -21,12 +21,12 @@ def taylor(x, n):
         return x - (x**3)/6 + (x**5)/120 - (x**7)/5040
 
 
-def plot_sine():
+def plot_sine_graph():
     # Define the x values for the plot
-    x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)
+    x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)  # Return evenly spaced numbers over a specified interval.
 
     # Plot the sin function and the Taylor series approximations
-    plt.plot(x, sin(x), label='sin(x)')
+    plt.plot(x, get_sine(x), label='sin(x)')  # plot the data point (x, get_sine(x)
     plt.plot(x, taylor(x, 1), label='1st order')
     plt.plot(x, taylor(x, 3), label='3rd order')
     plt.plot(x, taylor(x, 5), label='5th order')
@@ -34,10 +34,10 @@ def plot_sine():
 
     # Set the plot title and axis labels
     plt.title('sin(x) and Taylor Series Approximations')
-    plt.xlabel('x')
+    plt.xlabel('x')  # write graph label
     plt.ylabel('y')
 
     # Set the legend and show the plot
     plt.legend()
-    plt.show()
+    plt.show()  # show graph
 
